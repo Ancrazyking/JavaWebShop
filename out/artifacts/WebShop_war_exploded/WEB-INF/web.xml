@@ -3,4 +3,36 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.ancrazyking.web.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>ActiveServlet</servlet-name>
+        <servlet-class>com.ancrazyking.web.servlet.ActiveServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActiveServlet</servlet-name>
+        <url-pattern>/active</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <servlet-class>com.ancrazyking.web.servlet.CheckUsernameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckUsernameServlet</servlet-name>
+        <url-pattern>/checkUsername</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
