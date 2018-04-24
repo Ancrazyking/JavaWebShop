@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -43,10 +44,9 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="product_list.htm">手机数码<span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">电脑办公</a></li>
-                    <li><a href="#">电脑办公</a></li>
-                    <li><a href="#">电脑办公</a></li>
+               <%--     <c:forEach items="${categoryList}" var="category">
+                    <li><a href="#">#{category.cname}</a>/li>
+                    </c:forEach>--%>
                 </ul>
                 <form class="navbar-form navbar-right" role="search">
                     <div class="form-group">
@@ -56,5 +56,15 @@
                 </form>
             </div>
         </div>
+        <script type="text/javascript">
+            $(function () {
+               $.post(
+                   "${pageContext.request.contextPath}/categoryList",
+               );
+            });
+
+
+
+        </script>
     </nav>
 </div>
